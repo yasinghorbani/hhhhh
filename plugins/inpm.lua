@@ -22,7 +22,7 @@ local service = msg.service
 		else
 			from_username = "@[none]"
 		end
-		text = "User From Info:\n\nID: "..from_id.."\nFirst: "..from_first_name.."\nLast: "..from_last_name.."\nUsername: "..from_username
+		text = "User From Info:\n\nID: "..from_id.."\nFirstName: "..from_first_name.."\nLastName: "..from_last_name.."\nUsername: "..from_username
 		send_large_msg(user, text)
 	end
 	return msg
@@ -86,19 +86,19 @@ local service = msg.service
 local name_log = user_print_name(msg.from)
 if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel" then
 	if is_gbanned(msg.from.id) then
-        return 'You are globally banned.'
+        return 'You Are Public Banned'
 	end
     if matches[1] == 'join' then
 	local data = load_data(_config.moderation.data)
 	if matches[2]:lower() == 'english' and matches[3]:lower() == 'support' then
 		savelog(msg.to.id, name_log.." ["..msg.from.id.."] tried to join English support")
-		local target = 1041751030
+		local target = 112840592
 		local long_id = data[tostring(target)]['long_id']
 		if is_banned(msg.from.id, tostring(target)) then
-			return 'You are banned.'
+			return 'You Are Banned'
 		end
 		if data[tostring(target)]['settings']['lock_member'] == 'yes' and not is_owner2(msg.from.id, tostring(target)) then
-			return 'Group is private.'
+			return 'Group Is Private'
 		end
 		if is_admin1(msg) then
 			user_type = 'admin'
@@ -113,13 +113,13 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 		channel_invite(channel, user, ok_cb, false)
 	elseif matches[2]:lower() == 'persian' and matches[3]:lower() == 'support' then
 		savelog(msg.to.id, name_log.." ["..msg.from.id.."] tried to join Persian support")
-		local target = 1017700355
+		local target = 112840592
 		local long_id = data[tostring(target)]['long_id']
 		if is_banned(msg.from.id, tostring(target)) then
-			return 'You are banned.'
+			return 'You Are Banned'
 		end
 		if data[tostring(target)]['settings']['lock_member'] == 'yes' and not is_owner2(msg.from.id, '36088606') then
-			return 'Group is private.'
+			return 'Group Is Private'
 		end
 		if is_admin1(msg) then
 			user_type = 'admin'
@@ -135,7 +135,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 	elseif string.match(matches[2], '^%d+$') then
 		local long_id = tostring(data[tostring(matches[2])]['long_id'])
 		if not data[tostring(matches[2])] then
-			return "Chat not found."
+			return "Chat Not Found"
 		end
 		group_name = data[tostring(matches[2])]['settings']['set_name']
 		if is_admin1(msg) then
@@ -157,10 +157,10 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 			channel_set_mod(channel, user, ok_cb, false)
 		end
         if is_banned(msg.from.id, matches[2]) then
-			return 'You are banned.'
+			return 'You Are Banned'
 		end
 		if data[tostring(matches[2])]['settings']['lock_member'] == 'yes' and not is_owner2(msg.from.id, matches[2]) then
-			return 'Group is private.'
+			return 'Group Is Private'
 		end
 			if not is_support(msg.from.id) and not is_admin1(msg) then
 				user_type = "regular"
@@ -208,7 +208,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 
 	if matches[1] == 'help' and msg.to.type == 'user' or matches[1] == 'pmhelp' and is_admin1(msg) and msg.to.type ~= 'user' then
       	savelog(msg.to.id, name_log.." ["..msg.from.id.."] used pm help")
-		text = "Welcome to TeleSeed!\n\nTo get a list of TeleSeed groups use /chats or /chatlist for a document list of chats.\n\nTo get a new TeleSeed group, contact a support group:\n\nFor English support, use: /join English support\n\nFor Persian support, use: /join Persian support\n\nFor more information, check out our channels:\n\n@TeleseedCH [English]\n@Iranseed [Persian]\n\nThanks for using @TeleSeed!"
+		text = "Welcome To TeleIran\n\nTo Get List TeleIran Groups use /chats \n\nTo Get New TeleIran Group, Contact  Support Group:\n\nFor English Support, Use: /join English support\n\nFor Persian support, Use: /join Persian support\n\nFor More Information, Check TeleIran Channels:\n\n@TeleIranTeam [English]\n@TeleIranTeam [Persian]\n\nThanks For Use @TeleIran"
      	return text
     end
 
@@ -247,7 +247,7 @@ return {
 	"^[#!/](pmhelp)$",
 	"^[#!/](superhelp)$",
     "^[#!/](chats)$",
-    "^[#!/](chatlist)$",
+  --"^[#!/](chatlist)$",
     "^[#!/](join) (%d+)$",
 	"^[#!/](join) (.*) (support)$",
     "^[#!/](kickme) (.*)$",
