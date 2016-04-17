@@ -1,4 +1,3 @@
-
 local function run(msg, matches)
   if is_chat_msg(msg) then
     local text = [[
