@@ -1,8 +1,8 @@
-# [TeleSeed](https://telegram.me/TeleSeed)
+# [TeleIran](https://telegram.me/TeleIran)
 
-[![https://gitter.im/SEEDTEAM/TeleSeed](https://badges.gitter.im/SEEDTEAM/TeleSeed.svg)](https://gitter.im/SEEDTEAM/TeleSeed?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**An advanced and powerful administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under the [GNU General Public License](https://github.com/SEEDTEAM/TeleSeed/blob/master/LICENSE)**.
+
+**An advanced and powerful administration bot based on lua
 # Features
 
 * **A powerful antispam system with custom sensitivity for each group**
@@ -33,7 +33,7 @@ TeleSeed has several commands that are only usable at certain ranks.
 | Command | Description |
 |:--------|:------------|
 | [#!/]id | Returns group/SuperGroup ID or user id in pm. |
-| [#!/]teleseed | Returns bot information. |
+| [#!/]teleiran | Returns bot information. |
 
 
 ## Private Message Commands
@@ -257,11 +257,7 @@ After you run the bot for first time, send it `!id`. Get your ID and stop the bo
 Open ./data/config.lua and add your ID to the "sudo_users" section in the following format:
 ```
   sudo_users = {
-    110626080,
-    103649648,
-    111020322,
-    0,
-    YourID
+    112840592,
   }
 ```
 Then restart the bot.
@@ -285,24 +281,18 @@ Create a realm using the `!createrealm` command.
 Check out this [tutorial by Telegram Geeks](http://telegramgeeks.com/2016/01/teleseed-tutorial/) for further assistance with setup and installation.
 
 **Do not contact us** in private for support.
-Join our bot development group by sending `/join 1047524697` to [@TeleSeed](https://telegram.me/TeleSeed)
+Join our bot development group by sending `/join 1047524697` to [@TeleIran](https://telegram.me/TeleSeed)
 
 # Special thanks to
 [@seyedan25](https://telegram.me/seyedan25)
 
-For managing [@teleseed](https://telegram.me/TeleSeed) on Telegram.
+For managing [@TeleIran](https://telegram.me/TeleIran) on Telegram.
 
 [@Vamptacus](https://telegram.me/Vamptacus)
-
-For graphic designs.
 
 [topkecleon](https://github.com/topkecleon)
 
 [Juan Potato](https://github.com/JuanPotato)
-
-* * *
-
-# Our team!
 
 [Alphonse](https://github.com/hmon) ([Telegram](https://telegram.me/iwals))
 
@@ -314,6 +304,6 @@ For graphic designs.
 
 ### Our Telegram channels:
 
-English: [@TeleSeedCH](https://telegram.me/teleseedch)
+English: [@TeleIranTeam](https://telegram.me/TeleIranTeam)
 
-Persian: [@IranSeed](https://telegram.me/iranseed)
+Persian: [@IranIranTeam](https://telegram.me/TeleIranTeam)
