@@ -8,23 +8,9 @@ local function run(msg, matches)
  #block [Word] 
  #unblock [Word] 
 
- ❌Anti Tag: 
- #block @ 
- #block # 
-
-  ❌Anti Link: 
- #lock links 
- #block telegram.me 
-
- ❌Anti Emoji: 
- #block [Emoji] 
-
- ❌Anti Sticker: 
- #lock sticker 
-
  🎁Sticker Maker: 
  #sticker 
- #top 
+ #png
 
  📷WebShot: 
  #web [Site] 
@@ -41,6 +27,7 @@ local function run(msg, matches)
  ☢About TeleIan: 
  #TeleIran 
 
+
  🚀 Channel: @TeleIranTeam 💎
 ]]
     return text
@@ -54,23 +41,9 @@ local function run(msg, matches)
  #block [Word] 
  #unblock [Word] 
 
- ❌Anti Tag: 
- #block @ 
- #block # 
-
-  ❌Anti Link: 
- #lock links 
- #block telegram.me 
-
- ❌Anti Emoji: 
- #block [Emoji] 
-
- ❌Anti Sticker: 
- #lock sticker 
-
  🎁Sticker Maker: 
  #sticker 
- #top 
+ #png
 
  📷WebShot: 
  #web [Site] 
