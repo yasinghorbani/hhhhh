@@ -26,7 +26,7 @@
 * * *
 
 ## Commands
-TeleSeed has several commands that are only usable at certain ranks.
+TeleIran has several commands that are only usable at certain ranks.
 
 
 ## General Commands
