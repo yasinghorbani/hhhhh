@@ -242,7 +242,6 @@ function create_config( )
     "supergroup",
     "voice",
     "weather",
-    "webshot",
     "whitelist",
     
     },
