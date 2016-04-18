@@ -1,6 +1,6 @@
 do
 local function run(msg, matches)
-local support = 112840592
+local support = 1028991290
 local user = msg.from.id
 
     if matches[1]:lower() == "/join" or "#join" or "!join" then
