@@ -1,7 +1,7 @@
 local function tosticker(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
-    local file = 'data/stickers/'..msg.from.id..'.jpg'
+    local file = 'data/stickers/'..msg.from.id..'.png'
     print('File downloaded to:', result)
     os.rename(result, file)
     print('File moved to:', file)
@@ -9,7 +9,7 @@ local function tosticker(msg, success, result)
     redis:del("sticker:photo")
   else
     print('Error downloading: '..msg.id)
-    send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
+    send_large_msg(receiver, 'Failed, Please Try Again', ok_cb, false)
   end
 end
 local function run(msg,matches)
@@ -22,14 +22,14 @@ local function run(msg,matches)
         end
        end
     end
-    if matches[1] == "top" and is_momod(msg) then
+    if matches[1] == "png" and is_momod(msg) then
      redis:set("sticker:photo", "waiting")
      return 'Please Send Me Your Sticker Now'
     end
 end
 return {
   patterns = {
- "^[!#/](top)$",
+ "^[!#/](png)$",
  "%[(document)%]",
   },
   run = run,
