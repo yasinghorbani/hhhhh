@@ -212,27 +212,41 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-	"admin",
-    "onservice",
-    "inrealm",
+
+    "TeleIran",
+    "Support",
+    "admin",
+    "all",
+    "badword",
+    "banhammer",
+    "broadcast",
+    "calc",
+    "checks",
+    "help",
     "ingroup",
     "inpm",
-    "banhammer",
-    "stats",
-    "anti_spam",
-    "owners",
-    "arabic_lock",
-    "set",
-    "get",
-    "broadcast",
+    "inrealm",
     "invite",
-    "all",
-    "leave_ban",
-	"supergroup",
-	"whitelist",
-	"msg_checks"
+    "leave",
+    "lockarabic",
+    "lockbot",
+    "lockfwd",
+    "lockleave",
+    "lockspam",
+    "owners",
+    "plugins",
+    "png",
+    "rem",
+    "send",
+    "sticker",
+    "supergroup",
+    "voice",
+    "weather",
+    "webshot",
+    "whitelist",
+    
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {112840592,214596866},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[
 ]],
@@ -476,7 +490,6 @@ will return group ban list
 
 
 🔘Member Control
-#block @username
 #ban @username
 #unban @username
 #muteuser @username
@@ -488,6 +501,18 @@ will return group ban list
 #clean modlist
 #clean mutelist
 #clean bots
+
+
+🔘Block|UnBlock Word
+#block [Word]
+#unblock [Word]
+#blocklist
+#unblockall
+
+
+🔘Anti Tag Settings
+#block @
+#block #
 
 
 🔘Displays General Info 
