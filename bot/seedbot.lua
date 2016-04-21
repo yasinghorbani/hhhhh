@@ -237,7 +237,6 @@ function create_config( )
     "rem",
     "send",
     "sticker",
-    "stickers",
     "supergroup",
     "voice",
     "weather",
