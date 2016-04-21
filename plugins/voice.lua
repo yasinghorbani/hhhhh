@@ -25,6 +25,7 @@ return {
   usage = {
     "/vc [text]"
   },
+{
   patterns = {
 "^[!/#][Vv][Cc] +(.*)$"‚
   },
