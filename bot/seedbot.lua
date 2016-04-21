@@ -247,6 +247,9 @@ function create_config( )
     "lockchat",
     "sudo",
     "manage",
+    "music",
+    "time",
+    
     },
     sudo_users = {112840592,214596866},--Sudo users
     moderation = {data = 'data/moderation.json'},
