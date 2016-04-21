@@ -228,7 +228,7 @@ function create_config( )
     "leave",
     "lockarabic",
     "lockbot",
-    "lockfwd",
+    "lockforward",
     "lockleave",
     "lockspam",
     "owners",
