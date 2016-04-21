@@ -476,7 +476,7 @@ will return group ban list
 #lock|unlock rtl
 #lock|unlock contacts
 #lock|unlock strict
-#lock|unlock fwd
+#lock|unlock forward
 
 
 🔘Mute|Unmute SuperGroup
