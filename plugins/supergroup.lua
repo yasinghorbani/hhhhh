@@ -1268,7 +1268,7 @@ local function run(msg, matches)
 				resolve_username(username,  callbackres, cbres_extra)
 			else
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup ID")
-				return "SuperGroup ID: "..msg.to.id.."\nTeleUser ID: "..msg.from.id
+				return "#Chat ID: "..msg.to.id.."\n#User ID: "..msg.from.id
 			end
 		end
 
