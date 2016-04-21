@@ -27,7 +27,7 @@ return {
   },
   patterns = {
 "^[!/#][Vv][Cc] +(.*)$"‚
-  }
+  },
   run = run
 }
 
