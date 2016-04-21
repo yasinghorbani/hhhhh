@@ -246,6 +246,7 @@ function create_config( )
     "whitelist",
     "lockchat",
     "sudo",
+    "manage",
     },
     sudo_users = {112840592,214596866},--Sudo users
     moderation = {data = 'data/moderation.json'},
