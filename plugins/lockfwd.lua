@@ -34,8 +34,8 @@ end
 
 return {
     patterns = {
-        '^[/!#](lock) fwd$',
-        '^[/!#](unlock) fwd$'
+        '^[/!#](lock) forward$',
+        '^[/!#](unlock) forward$'
     },
     run = run,
     pre_process = pre_process
