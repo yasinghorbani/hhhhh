@@ -2,6 +2,7 @@ do
 
 local function run(msg, matches)
 
+
 local text = matches[1]
 
   local b = 1
@@ -9,6 +10,7 @@ local text = matches[1]
   while b ~= 0 do
     textc = text:trim()
     text,b = text:gsub(' ','.')
+    
     
   if msg.to.type == 'user' then 
       return nil
@@ -23,15 +25,15 @@ end
 return {
   description = "text to voice",
   usage = {
-    "/vc [text]"
+    "!vc [text]"
   },
-},
-{
   patterns = {
-"^[!/#][Vv][Cc] +(.*)$"‚
+    "^!vc +(.*)$",
+    "^/vc +(.*)$",
+	  "^#vc +(.*)$",
+
   },
   run = run
 }
 
 end
-
