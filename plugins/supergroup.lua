@@ -1770,7 +1770,7 @@ local function run(msg, matches)
 					mute(chat_id, msg_type)
 					return msg_type.." has been muted"
 				else
-					return "SuperGroup mute "..msg_type.." is already on"
+					return "SuperGroup mute "..msg_type.." Is Already Install"
 				end
 			end
 			if matches[2] == 'photo' then
@@ -1780,7 +1780,7 @@ local function run(msg, matches)
 					mute(chat_id, msg_type)
 					return msg_type.." has been muted"
 				else
-					return "SuperGroup mute "..msg_type.." is already on"
+					return "SuperGroup mute "..msg_type.." Is Already Install"
 				end
 			end
 			if matches[2] == 'video' then
@@ -1828,9 +1828,9 @@ local function run(msg, matches)
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return "Mute "..msg_type.."  has been enabled"
+					return "Mute "..msg_type.."  Has Been Install"
 				else
-					return "Mute "..msg_type.." is already on"
+					return "Mute "..msg_type.." Is Already Install"
 				end
 			end
 		end
@@ -1843,7 +1843,7 @@ local function run(msg, matches)
 					unmute(chat_id, msg_type)
 					return msg_type.." has been unmuted"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "Mute "..msg_type.." Is Not Install"
 				end
 			end
 			if matches[2] == 'photo' then
@@ -1853,7 +1853,7 @@ local function run(msg, matches)
 					unmute(chat_id, msg_type)
 					return msg_type.." has been unmuted"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "Mute "..msg_type.." Is Not Install"
 				end
 			end
 			if matches[2] == 'video' then
@@ -1863,7 +1863,7 @@ local function run(msg, matches)
 					unmute(chat_id, msg_type)
 					return msg_type.." has been unmuted"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "Mute "..msg_type.." Is Not Install"
 				end
 			end
 			if matches[2] == 'gifs' then
@@ -1873,7 +1873,7 @@ local function run(msg, matches)
 					unmute(chat_id, msg_type)
 					return msg_type.." have been unmuted"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "Mute "..msg_type.." Is Not Install"
 				end
 			end
 			if matches[2] == 'documents' then
@@ -1883,7 +1883,7 @@ local function run(msg, matches)
 					unmute(chat_id, msg_type)
 					return msg_type.." have been unmuted"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "Mute "..msg_type.." Is Not Install"
 				end
 			end
 			if matches[2] == 'text' then
@@ -1901,9 +1901,9 @@ local function run(msg, matches)
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
 					unmute(chat_id, msg_type)
-					return "Mute "..msg_type.." has been disabled"
+					return "Mute "..msg_type.." Is UnInstall"
 				else
-					return "Mute "..msg_type.." is already disabled"
+					return "Mute "..msg_type.." Is Already UnInstall"
 				end
 			end
 		end
