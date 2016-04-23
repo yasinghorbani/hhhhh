@@ -226,7 +226,7 @@ function create_config( )
     "inrealm",
     "invite",
     "leave",
-    "lockarabic",
+    "lockporn",
     "lockbot",
     "lockforward",
     "lockleave",
@@ -242,6 +242,8 @@ function create_config( )
     "weather",
     "whitelist",
     "time",
+    "instagram",
+    "money",
     
     },
     sudo_users = {112840592,163320706},--Sudo users
