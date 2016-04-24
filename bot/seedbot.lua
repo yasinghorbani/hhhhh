@@ -242,7 +242,6 @@ function create_config( )
     "weather",
     "whitelist",
     "time",
-    "instagram",
     "money",
     
     },
