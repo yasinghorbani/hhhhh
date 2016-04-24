@@ -226,7 +226,6 @@ function create_config( )
     "inrealm",
     "invite",
     "leave",
-    "lockporn",
     "lockbot",
     "lockforward",
     "lockleave",
