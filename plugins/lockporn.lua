@@ -2,7 +2,7 @@ local function nuditycheck(msg, success, result)
   if success then
 local file = 'data/nudity/'..string.sub(result, 38)
 os.rename(result, file)
-  local curl = 'curl -X POST "https://api.sightengine.com/1.0/nudity.json" -F "api_user=1579241866" -F "api_secret=d29fKhzZ6zq5W2Df" -F "photo=@'..file..'"'
+  local curl = 'curl -X POST "https://api.sightengine.com/1.0/nudity.json" -F "api_user=nil" -F "api_secret=nil" -F "photo=@'..file..'"'
   local jcmd = io.popen(curl)
   
   local res = jcmd:read('*all')
@@ -12,7 +12,9 @@ if jdat.status then
 	     send_large_msg(get_receiver(msg), jdat.error_message, ok_cb, false)
           elseif jdat.status == 'success' then
              if jdat.nudity.result then
-	           delete_msg(msg.id,ok_cb,false)
+	     send_large_msg(get_receiver(msg), 'این یک تصویر پورن است', ok_cb, false)
+         else
+         send_large_msg(get_receiver(msg), 'این یک تصویر سادست', ok_cb, false)
          end
   end
 end
@@ -22,14 +24,14 @@ end
   end
 end
 local function pre_process(msg)
-if redis:get('porns:'..msg.to.id)
-if msg.media.type == 'photo' then
-load_photo(msg.id, nuditycheck, msg)
-end
-end
-end
-return msg
+		      if msg.media then
+            if msg.media.type == 'photo' then
+                    load_photo(msg.id, nuditycheck, msg)
+            end
+            end
 end
 return {
-    pre_process = pre_process
+    patterns = {
+    },
+    pre_process = pre_process,
 }
