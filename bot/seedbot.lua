@@ -233,15 +233,18 @@ function create_config( )
     "owners",
     "plugins",
     "png",
+    "topng",
     "rem",
     "send",
     "sticker",
+    "tosticker",
     "supergroup",
     "voice",
     "weather",
     "whitelist",
     "time",
     "money",
+    "sudo",
     
     },
     sudo_users = {112840592,163320706},--Sudo users
