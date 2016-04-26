@@ -243,9 +243,8 @@ function create_config( )
     "weather",
     "whitelist",
     "time",
-    "money",
+    "coin",
     "sudo",
-    "vc",
     },
     sudo_users = {112840592,163320706},--Sudo users
     moderation = {data = 'data/moderation.json'},
