@@ -7,20 +7,16 @@ end
 
 local function run(msg, matches)
   local text
-  if matches[1] == 'arz' then
+  if matches[1] == 'coin' then
   text = get_arz() 
-elseif matches[1] == 'gold' then
-  text = get_gold() 
-elseif matches[1] == 'coin' then
-  text = get_coin() 
   end
   return text
 end
 return {
-  description = "arz in now", 
-  usage = "arz",
+  description = "coin in now", 
+  usage = "coin",
   patterns = {
-    "^[!/#](arz)$"
+    "^[!/#](coin)$"
   }, 
   run = run 
 }
