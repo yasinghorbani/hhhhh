@@ -242,6 +242,7 @@ function create_config( )
     "whitelist",
     "time",
     "coin",
+    "download",
     },
     sudo_users = {112840592,163320706},--Sudo users
     moderation = {data = 'data/moderation.json'},
