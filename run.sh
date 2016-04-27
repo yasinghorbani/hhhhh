@@ -2,6 +2,6 @@
 
 while true; do
         kill $(pgrep telegram-cli)
-        ./launch.sh
-	sleep 5s
+        screen ./launch.sh
+	sleep 1s
 done
