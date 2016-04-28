@@ -133,10 +133,9 @@ else
   if [ ! -f ./tg/bin/telegram-cli ]; then
     echo "tg binary not found"
     echo "Run $0 install"
-    exit 1
   fi
   
-  chmod 777 steady.sh
+
   
   #Adding some color. By @iicc1 :D
    echo -e "\033[38;5;208m"
