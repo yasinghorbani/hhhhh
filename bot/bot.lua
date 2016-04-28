@@ -390,7 +390,6 @@ mute group message types
 
 !unmute [all|audio|gifs|photo|video]
 Unmute group message types
-*If "unmuted" message type: user is not kicked if message type is posted 
 
 !set rules <text>
 Set <text> as rules
