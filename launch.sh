@@ -133,9 +133,9 @@ else
   if [ ! -f ./tg/bin/telegram-cli ]; then
     echo "tg binary not found"
     echo "Run $0 install"
+    exit 1
   fi
   
-
 
   if [ -f data/config.lua ]; then
     ./config_fix.sh
