@@ -7,7 +7,7 @@ return {
   usage = " TeleIran ",
   patterns = {
     "^[#/!][Tt][Ee][Ll][Ee][Ii][Rr][Aa][Nn]$",
-    "^[Vv][Ee][Rr][Ss][Ii][Oo][Nn]$",
+    "^[#/!][Vv][Ee][Rr][Ss][Ii][Oo][Nn]$",
   },
   run = run
 }
