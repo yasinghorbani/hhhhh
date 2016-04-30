@@ -12,7 +12,7 @@ return {
     "!voice [text]"
   },
   patterns = {
-    "^[!/#]vc +(.+)$"
+    "^[!/#][Vv][Oo][Ii][Cc][Ee] +(.+)$"
   },
   run = run
 }
