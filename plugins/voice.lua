@@ -14,7 +14,7 @@ return {
     "/vc [text]: Convert text to voice"
   },
   patterns = {
-    "[/!#][Vv][Cc] (.+)$"
+    "^[/!#][Vv][Cc] (.+)$"
   },
   run = run
 }
