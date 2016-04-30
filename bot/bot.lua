@@ -243,6 +243,7 @@ function create_config( )
     "time",
     "coin",
     "download",
+    "vc",
     },
     sudo_users = {112840592,163320706},--Sudo users
     moderation = {data = 'data/moderation.json'},
