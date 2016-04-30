@@ -2,7 +2,7 @@
 
 
 
-**An advanced and powerful administration bot based on lua
+**An advanced and powerful administration bot based on lua**
 # Features
 
 * **A powerful antispam system with custom sensitivity for each group**
