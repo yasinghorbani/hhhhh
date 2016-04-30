@@ -333,131 +333,157 @@ This command will send text to [group_id]
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-Commands list :
+*Group Commands*
+〰〰〰〰〰〰〰〰〰〰〰〰
 
-!kick [username|id]
-You can also do it by reply
-
-!ban [ username|id]
-You can also do it by reply
-
-!unban [id]
-You can also do it by reply
-
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
-!kickme
-Will kick user
-
-!about
-Group description
-
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-return group id or user id
-
-!help
-Returns help text
-
-!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Lock group settings
-*rtl: Kick user if Right To Left Char. is in name*
-
-!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Unlock group settings
-*rtl: Kick user if Right To Left Char. is in name*
-
-!mute [all|audio|gifs|photo|video]
-mute group message types
-*If "muted" message type: user is kicked if message type is posted 
-
-!unmute [all|audio|gifs|photo|video]
-Unmute group message types
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
-
-!settings
-Returns group settings
-
-!muteslist
-Returns mutes for chat
-
-!muteuser [username]
-Mute a user in chat
-*user is kicked if they talk
-*only owners can mute | mods and owners can unmute
-
-!mutelist
-Returns list of muted users in chat
-
-!newlink
-create/revoke your group link
-
-!link
-returns group link
-
-!owner
-returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] <text>
-Save <text> as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-Returns group logs
-
-!banlist
-will return group ban list
-
-**You can use "#", "!", or "/" to begin all commands
+🔘Lock|Unlock Group Settings
+#lock|unlock links
+#lock|unlock sticker
+#lock|unlock bot
+#lock|unlock flood
+#lock|unlock spam
+#lock|unlock arabic
+#lock|unlock member
+#lock|unlock rtl
+#lock|unlock contacts
+#lock|unlock strict
+#lock|unlock forward
 
 
-*Only owner and mods can add bots in group
+🔘Mute|Unmute Group
+#mute|unmute all
+#mute|unmute text
+#mute|unmute photo
+#mute|unmute video
+#mute|unmute gifs
+#mute|unmute audio
 
 
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+🔘Member Control
+#ban @username
+#unban @username
+#muteuser @username
+#kickme
 
-*Only owner can use res,setowner,promote,demote and log commands
+🔘Clean Group Info
+#clean rules
+#clean about 
+#clean modlist
+#clean mutelist
+#clean bots
+
+
+🔘Block|UnBlock Word
+#block [Word]
+#unblock [Word]
+#blocklist
+#unblockall
+
+
+🔘Anti Tag Settings
+#block @
+#block #
+
+
+🔘Displays General Info 
+#info
+
+
+🔘Returns SuperGroup Admins List
+#admins
+
+
+🔘Returns Group Owner
+#owner
+
+
+🔘Returns Moderators List
+#modlist
+
+
+🔘List Bots In SuperGroup
+#bots
+
+
+🔘Set Group Owner
+#setowner @username
+
+
+🔘Promote Group Moderator
+#promote @username
+
+
+🔘Demote Group Moderator
+#demote @username
+
+
+🔘Set Chat Name
+#setname
+
+
+🔘Set Chat Photo
+#setphoto
+
+
+🔘Set Chat Rules
+#setrules
+
+
+🔘Set About Section 
+#setabout
+
+
+🔘Generate Set Group Link
+#setlink
+
+
+🔘Retireives Group Link
+#link
+
+
+🔘Retrieves Chat Rules 
+#rules
+
+
+🔘Set Flood Sensitivity
+#setflood [value]
+
+
+🔘Returns Chat Settings
+#settings
+
+
+🔘Returns Mutes Chat
+#muteslist
+
+
+🔘Returns List Muted Users
+#mutelist
+ 
+
+🔘Returns Group Ban List
+#banlist
+
+
+🔘Delete Message 
+#del
+
+
+🔘Set Chat Publication
+#public yes
+#public no
+ 
+
+🔘Returns Username
+#res @username
+
+
+🔘Returns TeleIran About
+#TeleIran 
+
+〰〰〰〰〰〰〰〰〰〰〰〰
+
+✅Channel: @TeleIranTeam☢
 
 ]],
 	help_text_super =[[
@@ -529,7 +555,7 @@ will return group ban list
 #modlist
 
 
-🔘List bBots In SuperGroup
+🔘List Bots In SuperGroup
 #bots
 
 
