@@ -11,10 +11,10 @@ end
 return {
   description = "Convert text to voice",
   usage = {
-    "tts [text]: Convert text to voice"
+    "/vc [text]: Convert text to voice"
   },
   patterns = {
-    "^[Tt]ts (.+)$"
+    "[/!#][Vv][Cc] (.+)$"
   },
   run = run
 }
