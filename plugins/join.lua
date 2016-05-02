@@ -8,7 +8,7 @@ local function set_pass(msg, pass, id)
   local name = string.gsub(msg.to.print_name, '_', '')
   if hash then
     redis:hset(hash, pass, id)
-      return send_large_msg("channel#id"..msg.to.id, "Password Of SuperGroup/Group : ["..name.."] Has Been Set To:\n> "..pass.."\n\nNow User Can Join in pm (Send Msg To @BlackPlus In PV) By\n\n#join "..pass.." ", ok_cb, true)
+      return send_large_msg("channel#id"..msg.to.id, "Password For Group: ["..name.."] \n Has Been Set: "..pass.."\n\nNow User Can Join In Pv \n\n #join "..pass.." ", ok_cb, true)
   end
 end
 
@@ -20,7 +20,7 @@ end
 local function show_add(cb_extra, success, result)
   vardump(result)
     local receiver = cb_extra.receiver
-    local text = "I Added You To > "..result.title
+    local text = "I Added You In Group: "..result.title
     send_large_msg(receiver, text)
 end
 local function added(msg, target)
@@ -32,7 +32,7 @@ local function run(msg, matches)
     local pass = matches[2]
     local id = msg.to.id
     if is_used(pass) then
-      return "Sorry, This pass is already taken."
+      return "Sorry, This Password Is Already Taken"
     end
     redis:del("setpass:", id)
     return set_pass(msg, pass, id)
@@ -43,27 +43,27 @@ local function run(msg, matches)
     local id = redis:hget(hash, pass)
     local receiver = get_receiver(msg)
     if not id then
-      return "*Error 404\n\n> Could not find a group with this pass\n> Maby the pass has been changed"
+      return " Could Not Find Group With This Password "
     end
     channel_invite("channel#id"..id, "user#id"..msg.from.id, ok_cb, false) 
   return added(msg, id)
   else
-  return "I could not added you to"..string.gsub(msg.to.id.print_name, '_', ' ')
+  return "I Could Not Added You: "..string.gsub(msg.to.id.print_name, '_', ' ')
   end
   if matches[1] == "pass" then
    local hash = 'setpass:'
    local chat_id = msg.to.id
    local pass = redis:hget(hash, channel_id)
    local receiver = get_receiver(msg)
-   send_large_msg(receiver, "Password for SuperGroup/Group : ["..msg.to.print_name.."]\n\nPass > "..pass)
+   send_large_msg(receiver, "Group Name: ["..msg.to.print_name.."]\n\nPassword: "..pass)
  end
 end
 
 return {
   patterns = {
-    "^[/!#](setpass) (.*)$",
-    "^[/!#](pass)$",
-    "^[/!#]([Jj]oin) (.*)$",
+    "^[/!#]([Ss][Ee][Tt][Pp][Aa][Ss][Ss]) #(.*)$",
+    "^[/!#]([Pp][Aa][Ss][Ss])$",
+    "^[/!#]([Jj][Oo][Ii][Nn]) (.*)$",
   "^!!tgservice (chat_add_user)$",
   "^!!tgservice (.+)$",
     "^!!tgservice (chat_del_user)$"
