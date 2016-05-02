@@ -8,7 +8,7 @@ local function set_pass(msg, pass, id)
   local name = string.gsub(msg.to.print_name, '_', '')
   if hash then
     redis:hset(hash, pass, id)
-      return send_large_msg("channel#id"..msg.to.id, "Password For Group: ["..name.."] \n Has Been Set: "..pass.."\n\nNow User Can Join In Pv \n\n #join "..pass.." ", ok_cb, true)
+      return send_large_msg("channel#id"..msg.to.id, "Group Name: ["..name.."] \n\nPassword Group: "..pass.."\n\nNow User Can Use: \n\n /join #"..pass.." ", ok_cb, true)
   end
 end
 
@@ -55,7 +55,7 @@ local function run(msg, matches)
    local chat_id = msg.to.id
    local pass = redis:hget(hash, channel_id)
    local receiver = get_receiver(msg)
-   send_large_msg(receiver, "Group Name: ["..msg.to.print_name.."]\n\nPassword: "..pass)
+   send_large_msg(receiver, "Group Name: ["..msg.to.print_name.."]\n\nPassword: #"..pass)
  end
 end
 
