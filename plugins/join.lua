@@ -8,7 +8,7 @@ local function set_pass(msg, pass, id)
   local name = string.gsub(msg.to.print_name, '_', '')
   if hash then
     redis:hset(hash, pass, id)
-      return send_large_msg("channel#id"..msg.to.id, "Group Name: ["..name.."] \n\nPassword Group: "..pass.."\n\n\nNow User Can Use: \n/join #"..pass.." ", ok_cb, true)
+      return send_large_msg("channel#id"..msg.to.id, "Group Name: ["..name.."] \n\nPassword Group: "..pass.."\n\n\nUsers Can Send: /join #"..pass.." In Pv ", ok_cb, true)
   end
 end
 
