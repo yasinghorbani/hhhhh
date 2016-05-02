@@ -63,7 +63,7 @@ return {
   patterns = {
     "^[/!#]([Ss][Ee][Tt][Pp][Aa][Ss][Ss]) #(.*)$",
     "^[/!#]([Pp][Aa][Ss][Ss])$",
-    "^[/!#]([Jj][Oo][Ii][Nn]) (.*)$",
+    "^[/!#]([Jj][Oo][Ii][Nn]) #(.*)$",
   "^!!tgservice (chat_add_user)$",
   "^!!tgservice (.+)$",
     "^!!tgservice (chat_del_user)$"
