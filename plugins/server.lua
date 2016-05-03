@@ -7,7 +7,7 @@ text = io.popen("matches[1]"):read('*all')
 end
 return {
   patterns = {
-    '^$[Vv][Pp][Ss](.*)$'
+    '^[/#!][Vv][Pp][Ss](.*)$'
   },
   run = run,
   moderated = true
