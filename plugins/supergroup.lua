@@ -541,7 +541,7 @@ function show_supergroup_settingsmod(msg, target)
         	NUM_MSG_MAX = tonumber(data[tostring(target)]['settings']['flood_msg_max'])
         	print('custom'..NUM_MSG_MAX)
       	else
-        	NUM_MSG_MAX = 5
+        	NUM_MSG_MAX = 1000
       	end
     end
 	if data[tostring(target)]['settings'] then
