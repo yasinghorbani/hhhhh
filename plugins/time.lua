@@ -6,7 +6,7 @@ local text = '🕒 ساعت '..jdat.FAtime..' \n📆 امروز '..jdat.FAdate..
 return text
 end
 return {
-  patterns = {"^[/!]([Tt][iI][Mm][Ee])$"}, 
+  patterns = {"^[/#!]([Tt][Ii][Mm][Ee])$"}, 
 run = run 
 }
 
